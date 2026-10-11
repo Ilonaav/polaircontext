@@ -1,0 +1,52 @@
+media: media
+content:
+  - name: blogs
+    label: Blogs beheren
+    type: file
+    path: content/blogs.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Titel
+        type: string
+        required: true
+      - name: cat
+        label: Categorie
+        type: select
+        required: true
+        options:
+          values:
+            - name: hoofd
+              label: In mijn hoofd
+            - name: voordeur
+              label: Achter de voordeur
+            - name: mensen
+              label: Tussen de mensen
+            - name: pillen
+              label: Pillen & praten
+            - name: toch
+              label: En toch...
+            - name: uitleg
+              label: Hoe zit dat nou?
+      - name: summary
+        label: Korte introductie
+        type: text
+        required: true
+      - name: body
+        label: Blogtekst
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: sources
+        label: Bronnen (optioneel)
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Naam bron
+            type: string
+          - name: url
+            label: Webadres bron
+            type: string
