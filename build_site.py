@@ -127,7 +127,7 @@ def make_home(html_source, preview):
                    "l.href=articleHref(p.title);l.textContent='Eigen link naar deze blog ↗';"
                    "l.style.color='var(--deep)';a.append(l);"
                    "document.getElementById('modalbody').append(a);"
-                   "if(location.protocol==='file:')return;
+                   "if(location.protocol==='file:')return;"
                    "}"
                    +needle)
     if html_source.count(needle) != 1:
