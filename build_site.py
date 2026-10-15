@@ -127,9 +127,8 @@ def make_home(html_source, preview):
                    "l.href=articleHref(p.title);l.textContent='Eigen link naar deze blog ↗';"
                    "l.style.color='var(--deep)';a.append(l);"
                    "document.getElementById('modalbody').append(a);"
-                   "if(location.protocol==='file:')return;"
-                   "history.pushState({polairBlog:true},'', '/blog/'+slugify(p.title)+'/');"
-                   "hasBlogOverlay=true}"
+                   "if(location.protocol==='file:')return;
+                   "}"
                    +needle)
     if html_source.count(needle) != 1:
         raise RuntimeError('Kan de bestaande blog-pop-up niet uniek vinden.')
